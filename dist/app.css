@@ -111,6 +111,10 @@ body {
   font-family: cursive;
 }
 
+.section-header {
+  padding-bottom: 1.1em;
+  font-size: 2.1em;
+}
 .section-header .super {
   color: #69a0fd;
   display: block;
@@ -119,6 +123,8 @@ body {
 .section-header .sub {
   color: black;
   display: block;
+  font-family: "Roboto";
+  color: #333333;
 }
 
 .jumbotron {
@@ -213,15 +219,15 @@ body {
 }
 
 .wrapper::after {
-  font-family: "Roboto", sans-serif;
-  font-size: 8.2em;
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: 9.2em;
   opacity: 0.3;
   font-weight: bolder;
   color: white;
   position: absolute;
   z-index: -99;
   transform: rotate(90deg);
-  text-shadow: -1px -1px 0 #c2944f, 1px -1px 0 #c2944f, -1px 1px 0 #c2944f, 1px 1px 0 #c2944f;
+  text-shadow: -2px -2px 0 #c2944f, 2px -2px 0 #c2944f, -2px 2px 0 #c2944f, 2px 2px 0 #c2944f;
   transform-origin: top right;
   content: "Courses";
   right: 0;
@@ -264,17 +270,17 @@ body {
   position: relative;
 }
 .events::after {
-  font-family: "Roboto", sans-serif;
-  font-size: 8.2em;
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: 9.2em;
   opacity: 0.3;
   font-weight: bolder;
   color: white;
   position: absolute;
   z-index: -99;
   transform: rotate(90deg);
-  text-shadow: -1px -1px 0 #c2944f, 1px -1px 0 #c2944f, -1px 1px 0 #c2944f, 1px 1px 0 #c2944f;
+  text-shadow: -2px -2px 0 #c2944f, 2px -2px 0 #c2944f, -2px 2px 0 #c2944f, 2px 2px 0 #c2944f;
   left: 0;
-  bottom: 100%;
+  top: 40px;
   transform-origin: bottom left;
   content: "Events";
 }
@@ -283,13 +289,21 @@ body {
   margin: auto;
 }
 .events ul li {
-  width: 50%;
+  max-width: 50%;
   padding-right: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
+}
+.events ul li:nth-child(n+3) {
+  text-align: right;
+}
+.events ul li:nth-child(n+3) .event-description {
+  order: -1;
 }
 .events ul li .event-pic {
   flex-shrink: 0;
-  padding-right: 3em;
+}
+.events ul li .event-description {
+  padding: 3em;
 }
 .events ul li .event-description .when {
   font-family: "Roboto";
@@ -297,7 +311,7 @@ body {
   color: #797979;
 }
 .events ul li .event-description .what {
-  color: black;
+  color: #333333;
   font-family: "Roboto";
   font-size: 1.1em;
   padding-top: 1em;
@@ -305,6 +319,7 @@ body {
 }
 .events ul li .event-description .where {
   font-family: "Roboto";
+  font-weight: 500;
   font-size: 0.8em;
   color: #797979;
 }

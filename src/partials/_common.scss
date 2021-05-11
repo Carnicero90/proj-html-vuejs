@@ -28,6 +28,8 @@ body {
     font-family: cursive;
 }
 .section-header {
+    padding-bottom: 1.1em;
+    font-size: 2.1em;
     .super {
         color: #69a0fd;
         display: block;
@@ -36,6 +38,8 @@ body {
     .sub {
         color: black;
         display: block;
+        font-family: 'Roboto';
+        color: $color_1;
     }
 }
 

@@ -160,7 +160,7 @@ right: 0;    top: 30%;
     &::after {
         @include aside-banner;
         left: 0;
-        bottom: 100%;
+        top: 40px;
         transform-origin: bottom left;
         content: "Events";
     }
@@ -168,21 +168,28 @@ right: 0;    top: 30%;
         width: 65%;
         margin: auto;
         li {
-            width: 50%;
+            max-width: 50%;
             padding-right: 2em;
-            padding-bottom: 2em;
+            padding-bottom: 4em;
+            &:nth-child(n+3) {
+                text-align: right;
+                .event-description {
+                    order: -1;
+                }
+            }
             .event-pic {
                 flex-shrink: 0;
-                padding-right: 3em;
             }
             .event-description {
+                padding: 3em;
+
                 .when {
                     font-family: 'Roboto';
                     font-weight: 500;
                     color: $color_4;
                 }
                 .what {
-                    color: black;
+                    color: $color_1;
                     font-family: 'Roboto';
                     font-size: 1.1em;
                     padding-top: 1em;
@@ -191,6 +198,8 @@ right: 0;    top: 30%;
                 }
                 .where {
                     font-family: 'Roboto';
+                    font-weight: 500;
+
                     font-size: .8em;
                     color: $color_4;
                 }
