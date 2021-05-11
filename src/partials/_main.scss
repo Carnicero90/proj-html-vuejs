@@ -234,8 +234,10 @@ right: 0;    top: 30%;
 
 // section.newsletter
 .newsletter {
-    padding: 70px;
+    padding-top: 49px;
+    padding-bottom: 65px;
     color: $text_color_3;
+    font-weight: 500;
     background-color: $blue_c;
     background-image: url('../img/artist-shape-color-paint-top-left.png'), url('../img/artist-shape-color-paint-bottom-right.png');
     background-position: top left, bottom right;
@@ -248,6 +250,8 @@ right: 0;    top: 30%;
     }
     .mail {
         margin-left: 5em;
-        border-bottom: 1px solid $text_color_3;
+        font-size: 1.4em;
+        padding-bottom: .6em;
+        border-bottom: 2px solid #5b71a4;
     }
 }

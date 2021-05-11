@@ -4,11 +4,18 @@ input {
     border: none;
     color: inherit;
     font-size: inherit;
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        opacity: 1;
+    }
 }
 
 body {
     //TODO: salva i tre font in variabili
     font-family: 'Playfair Display', sans-serif;
+    font-stretch: expanded;
     // font-family: 'Roboto'
 }
 

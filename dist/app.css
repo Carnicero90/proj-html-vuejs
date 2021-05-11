@@ -90,9 +90,22 @@ input {
   color: inherit;
   font-size: inherit;
 }
+input:focus {
+  outline: none;
+}
+input::-moz-placeholder {
+  opacity: 1;
+}
+input:-ms-input-placeholder {
+  opacity: 1;
+}
+input::placeholder {
+  opacity: 1;
+}
 
 body {
   font-family: "Playfair Display", sans-serif;
+  font-stretch: expanded;
 }
 
 .btn {
@@ -344,8 +357,10 @@ body {
 }
 
 .newsletter {
-  padding: 70px;
+  padding-top: 49px;
+  padding-bottom: 65px;
   color: #ffffff;
+  font-weight: 500;
   background-color: #224184;
   background-image: url("../img/artist-shape-color-paint-top-left.png"), url("../img/artist-shape-color-paint-bottom-right.png");
   background-position: top left, bottom right;
@@ -359,5 +374,7 @@ body {
 }
 .newsletter .mail {
   margin-left: 5em;
-  border-bottom: 1px solid #ffffff;
+  font-size: 1.4em;
+  padding-bottom: 0.6em;
+  border-bottom: 2px solid #5b71a4;
 }
