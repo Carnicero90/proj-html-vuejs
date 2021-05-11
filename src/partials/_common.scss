@@ -21,15 +21,17 @@ input {
 
 body {
     //TODO: salva i tre font in variabili
-    font-family: 'Playfair Display', sans-serif;
-    font-stretch: expanded;
-    // font-family: 'Roboto'
+    // font-family: 'Playfair Display', sans-serif;
+    font-family: 'Roboto';
+    min-width: 900px;
 }
 
 .btn {
-    padding: .6em 2em;
+    padding: .8em 2.2em;
     border-radius: .4em;
     display: inline-block;
+    font-weight: bolder;
+    font-size: .9em;
     &.solid {
         color: white;
         background-color: $secondary_color;

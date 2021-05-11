@@ -1,6 +1,6 @@
 .jumbotron {
-    height: 80vh;
-    padding: 10vh;
+    height: 733px;
+    padding: 60px 147px;
     background-color: $main_bg;
     background-image:
         url('../img/artist-shape-02.png'), //macchia in alto a sx
@@ -12,8 +12,8 @@
 
     background-position:
         0 0,
-        0 40%,
-        30% 95%,
+        20px 145px,
+        30% 91%,
         top right,
         95% 10%,
         bottom right;
@@ -21,13 +21,16 @@
     background-size:
         40%,
         20%,
-        180px,
+    auto,
         contain,
         8%,
         200px;
     background-repeat: no-repeat;
     &>* {
         width: calc(100%/3);
+    }
+    img {
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
     }
 
     .left {
@@ -37,14 +40,12 @@
             position: absolute;
         }
         .small {
-            height: 40%;
             bottom: 0;
             z-index: 3;
         }
         .big {
-            height: 66%;
-            top: 0;
-            left: 10vh;
+            top: 34px;
+            left: 187px;
         }
     }
     .right {
