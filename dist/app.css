@@ -151,17 +151,35 @@ body {
   color: #333333;
 }
 
+.cont {
+  position: relative;
+  background-color: #fbf9f6;
+}
+
+.spot {
+  position: absolute;
+  fill: #b2e0f6;
+  width: 481px;
+  height: auto;
+  bottom: 43px;
+  left: -60px;
+}
+
 .jumbotron {
   height: 733px;
+  position: relative;
   padding: 60px 147px;
-  background-color: #fbf9f6;
-  background-image: url("../img/artist-shape-02.png"), url("../img/artist-shape-03.png"), url("../img/artist-hero-image-03.png"), url("../img/artist-shape-01.png"), url("../img/artist-shape-04.png"), url("../img/artist-shape-05.png");
-  background-position: 0 0, 20px 145px, 30% 91%, 88% top, 91.3% 20%, 93% 95%;
-  background-size: 40%, 20%, auto, auto 86%, 130px, 320px;
+  background-image: url("../img/artist-shape-02.png"), url("../img/artist-shape-03.png"), url("../img/artist-hero-image-03.png"), url("../img/artist-shape-01.png"), url("../img/maxcoach-shape-12.png"), url("../img/artist-shape-04.png"), url("../img/artist-shape-05.png");
+  background-position: 0 0, 20px 145px, 30% 91%, 88% top, 82% 92%, 91.3% 20%, 93% 95%;
+  background-size: 40%, auto, auto, auto 86%, auto, 130px, 320px;
   background-repeat: no-repeat;
 }
 .jumbotron img {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+  width: auto;
+  z-index: 1;
+  display: block;
+  max-height: 100%;
 }
 .jumbotron .left {
   width: 25%;
@@ -181,6 +199,8 @@ body {
 .jumbotron .center {
   flex-grow: 1;
   padding: 3em;
+  z-index: 100;
+  background-color: inherit;
 }
 .jumbotron .center h1 {
   max-width: 80%;
@@ -196,15 +216,12 @@ body {
   right: 89px;
   bottom: 0;
 }
-.jumbotron img {
-  width: auto;
-  z-index: 1;
-  display: block;
-  max-height: 100%;
-}
 
 .coaching {
   width: 80%;
+  background-image: url("../img/maxcoach-shape-14.png");
+  background-position: 10% 0;
+  background-repeat: no-repeat;
   margin: auto;
 }
 .coaching li {
