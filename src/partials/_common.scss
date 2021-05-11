@@ -40,7 +40,7 @@ body {
 }
 .super {
     color: $heading_color;
-    font-size: 1.2em;
+    font-size: 150% !important; //poi tolgo
     display: block;
     font-family: 'Rossela', cursive;
 }

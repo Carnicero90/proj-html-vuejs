@@ -128,7 +128,7 @@ body {
 
 .super {
   color: #7ccbed;
-  font-size: 1.2em;
+  font-size: 150% !important;
   display: block;
   font-family: "Rossela", cursive;
 }
@@ -156,18 +156,15 @@ body {
   padding: 60px 147px;
   background-color: #fbf9f6;
   background-image: url("../img/artist-shape-02.png"), url("../img/artist-shape-03.png"), url("../img/artist-hero-image-03.png"), url("../img/artist-shape-01.png"), url("../img/artist-shape-04.png"), url("../img/artist-shape-05.png");
-  background-position: 0 0, 20px 145px, 30% 91%, top right, 95% 10%, bottom right;
-  background-size: 40%, 20%, auto, contain, 8%, 200px;
+  background-position: 0 0, 20px 145px, 30% 91%, 88% top, 91.3% 20%, 93% 95%;
+  background-size: 40%, 20%, auto, auto 86%, 130px, 320px;
   background-repeat: no-repeat;
-}
-.jumbotron > * {
-  width: calc(100%/3);
 }
 .jumbotron img {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
 }
 .jumbotron .left {
-  width: 33%;
+  width: 25%;
   position: relative;
 }
 .jumbotron .left .small, .jumbotron .left .big {
@@ -181,17 +178,27 @@ body {
   top: 34px;
   left: 187px;
 }
+.jumbotron .center {
+  flex-grow: 1;
+  padding: 3em;
+}
+.jumbotron .center h1 {
+  max-width: 80%;
+  font-size: 2.4em;
+  line-height: 130%;
+}
 .jumbotron .right {
-  width: 33%;
+  width: 25%;
   position: relative;
 }
 .jumbotron .right img {
   position: absolute;
-  right: 0;
+  right: 89px;
   bottom: 0;
 }
 .jumbotron img {
   width: auto;
+  z-index: 1;
   display: block;
   max-height: 100%;
 }
