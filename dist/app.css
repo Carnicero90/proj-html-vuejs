@@ -84,6 +84,12 @@ img {
 }
 
 /* ======================= */
+@font-face {
+  font-family: Rossela;
+  src: url("../Rossela-Demo.ttf");
+  font-weight: normal;
+  font-size: normal;
+}
 input {
   background: none;
   border: none;
@@ -119,9 +125,10 @@ body {
 }
 
 .super {
-  color: #69a0fd;
+  color: #7ccbed;
+  font-size: 1.2em;
   display: block;
-  font-family: cursive;
+  font-family: "Rossela", cursive;
 }
 
 .section-header {
@@ -129,9 +136,11 @@ body {
   font-size: 2.1em;
 }
 .section-header .super {
-  color: #69a0fd;
+  color: #7ccbed;
+  font-size: 1.2em;
+  padding-bottom: 0.2em;
   display: block;
-  font-family: cursive;
+  font-family: "Rossela", cursive;
 }
 .section-header .sub {
   color: black;
