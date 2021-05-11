@@ -1,0 +1,326 @@
+/* RESETS
+   ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* ======================= */
+/* FLEXERS
+   ======================= */
+.flexer {
+  display: flex;
+}
+.flexer.wrap {
+  flex-wrap: wrap;
+}
+.flexer.col {
+  flex-direction: column;
+}
+.flexer.center {
+  justify-content: center;
+}
+.flexer.around {
+  justify-content: space-around;
+}
+.flexer.between {
+  justify-content: space-between;
+}
+.flexer.end {
+  justify-content: flex-end;
+}
+.flexer.center-cross {
+  align-items: center;
+}
+.flexer .no-shrink {
+  flex-shrink: 0;
+}
+
+/* TEXT_PROPERTIES
+   ======================= */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+/* ======================= */
+/* MISC
+   ======================= */
+.list-inline > li {
+  /* !TODO da rifare in altro modo */
+  display: inline-block;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+/* ======================= */
+input {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+body {
+  font-family: "Playfair Display", sans-serif;
+}
+
+.btn {
+  padding: 0.6em 2em;
+  border-radius: 0.4em;
+  display: inline-block;
+}
+.btn.solid {
+  color: white;
+  background-color: #e1814a;
+}
+
+.super {
+  color: #69a0fd;
+  display: block;
+  font-family: cursive;
+}
+
+.section-header .super {
+  color: #69a0fd;
+  display: block;
+  font-family: cursive;
+}
+.section-header .sub {
+  color: black;
+  display: block;
+}
+
+.jumbotron {
+  height: 80vh;
+  padding: 10vh;
+  background-color: #fbf9f6;
+  background-image: url("../img/artist-shape-02.png"), url("../img/artist-shape-03.png"), url("../img/artist-hero-image-03.png"), url("../img/artist-shape-01.png"), url("../img/artist-shape-04.png"), url("../img/artist-shape-05.png");
+  background-position: 0 0, 0 40%, 30% 95%, top right, 95% 10%, bottom right;
+  background-size: 40%, 20%, 180px, contain, 8%, 200px;
+  background-repeat: no-repeat;
+}
+.jumbotron > * {
+  width: calc(100%/3);
+}
+.jumbotron .left {
+  width: 33%;
+  position: relative;
+}
+.jumbotron .left .small, .jumbotron .left .big {
+  position: absolute;
+}
+.jumbotron .left .small {
+  height: 40%;
+  bottom: 0;
+  z-index: 3;
+}
+.jumbotron .left .big {
+  height: 66%;
+  top: 0;
+  left: 10vh;
+}
+.jumbotron .right {
+  width: 33%;
+  position: relative;
+}
+.jumbotron .right img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.jumbotron img {
+  width: auto;
+  display: block;
+  max-height: 100%;
+}
+
+.coaching {
+  width: 80%;
+  margin: auto;
+}
+.coaching li {
+  width: 25%;
+}
+.coaching li:nth-child(2n) {
+  padding-top: 30px;
+}
+.coaching li img {
+  height: 5em;
+  width: auto;
+}
+
+.goal {
+  width: 80%;
+  margin: auto;
+}
+.goal .quote {
+  width: 50%;
+  flex-shrink: 0;
+  padding-right: 5em;
+}
+
+.video .vid-container {
+  position: relative;
+  width: 65%;
+  margin: auto;
+}
+.video .vid-container .play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.video .vid-container .play:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  position: relative;
+  background: url("../img/artist-shape-01.png");
+  background-position: -50% center;
+  background-repeat: no-repeat;
+}
+
+.wrapper::after {
+  font-family: "Roboto", sans-serif;
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  z-index: -99;
+  transform: rotate(90deg);
+  text-shadow: -1px -1px 0 #c2944f, 1px -1px 0 #c2944f, -1px 1px 0 #c2944f, 1px 1px 0 #c2944f;
+  transform-origin: top right;
+  content: "Courses";
+  right: 0;
+  top: 30%;
+}
+
+.courses-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+.courses-container .course {
+  padding: 15px;
+  width: 25%;
+  overflow: hidden;
+}
+.courses-container .course:hover .info-box {
+  top: -2em;
+  cursor: pointer;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px #e1814a;
+}
+.courses-container .course .info-box {
+  margin: 5px;
+  margin-right: 10%;
+  position: relative;
+  padding: 1em;
+  transition: position 2s;
+}
+.courses-container .course .info-box .price {
+  color: #e1814a;
+  font-family: serif;
+  font-weight: 600;
+}
+.courses-container .course .info-box .price::before {
+  content: "$";
+}
+
+.events {
+  position: relative;
+}
+.events::after {
+  font-family: "Roboto", sans-serif;
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  z-index: -99;
+  transform: rotate(90deg);
+  text-shadow: -1px -1px 0 #c2944f, 1px -1px 0 #c2944f, -1px 1px 0 #c2944f, 1px 1px 0 #c2944f;
+  left: 0;
+  bottom: 100%;
+  transform-origin: bottom left;
+  content: "Events";
+}
+.events ul {
+  width: 65%;
+  margin: auto;
+}
+.events ul li {
+  width: 50%;
+  padding-right: 2em;
+  padding-bottom: 2em;
+}
+.events ul .date {
+  font-family: "Roboto";
+}
+
+.blog {
+  width: 70%;
+  margin: auto;
+  background-color: #f5f7fa;
+  background-image: url("../img/maxcoach-shape-03.png");
+  background-size: contain;
+  background-position: 30%;
+  background-repeat: no-repeat;
+}
+.blog .left, .blog .right {
+  background-color: white;
+}
+.blog .center {
+  margin: 30px;
+}
+.blog .right {
+  margin-bottom: 10%;
+}
+
+.newsletter {
+  padding: 70px;
+  color: #ffffff;
+  background-color: #224184;
+  background-image: url("../img/artist-shape-color-paint-top-left.png"), url("../img/artist-shape-color-paint-bottom-right.png");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto 95%;
+}
+.newsletter .label {
+  font-size: 2em;
+  width: 8em;
+  text-align: right;
+}
+.newsletter .mail {
+  margin-left: 5em;
+  border-bottom: 1px solid #ffffff;
+}

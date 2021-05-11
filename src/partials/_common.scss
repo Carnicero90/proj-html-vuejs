@@ -1,0 +1,40 @@
+// resets
+input {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+body {
+    font-family: 'Playfair Display', sans-serif;
+    // font-family: 'Roboto'
+}
+
+.btn {
+    padding: .6em 2em;
+    border-radius: .4em;
+    display: inline-block;
+    &.solid {
+        color: white;
+        background-color: $secondary_color;
+        
+    }
+}
+.super {
+    color: #69a0fd;
+    display: block;
+    font-family: cursive;
+}
+.section-header {
+    .super {
+        color: #69a0fd;
+        display: block;
+        font-family: cursive;
+    }
+    .sub {
+        color: black;
+        display: block;
+    }
+}
+

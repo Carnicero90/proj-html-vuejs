@@ -1,0 +1,14 @@
+@mixin aside_banner {
+    font-family: "Roboto", sans-serif;
+    font-size: 5rem;
+    color: white;
+    position: absolute;
+    // overflow: hidden;
+    z-index: -99;
+    transform:  rotate(90deg);
+    text-shadow:
+    -1px -1px 0 $main_color,  
+     1px -1px 0 $main_color,
+     -1px 1px 0 $main_color,
+      1px 1px 0 $main_color;
+}

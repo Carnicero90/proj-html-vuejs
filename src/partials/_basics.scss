@@ -1,0 +1,98 @@
+/* RESETS
+   ======================= */
+
+   * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+img {
+    // !TODO valuta se togliere proprio
+    display: block;
+    width: 100%;
+}
+
+/* ======================= */
+
+/* FLEXERS
+   ======================= */
+.flexer {
+    display: flex;
+    // wrapping
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    // direction
+    &.col {
+        flex-direction: column;
+    }
+    // flex-items positioning --> main axis
+    &.center {
+        justify-content: center;
+    }
+    &.around {
+        justify-content: space-around;
+    }
+    &.between {
+        justify-content: space-between;
+    }
+    &.end {
+        justify-content: flex-end;
+    }
+    // flex-items positioning --> cross axis
+    &.center-cross {
+        align-items: center;
+    }
+    // FLEX ITEMS
+    .no-shrink {
+        flex-shrink: 0;
+    }
+}
+
+/* TEXT_PROPERTIES
+   ======================= */
+
+   .text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+/* ======================= */
+
+/* MISC
+   ======================= */
+
+   .list-inline>li {
+    /* !TODO da rifare in altro modo */
+    display: inline-block;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+/* ======================= */

@@ -1,0 +1,221 @@
+.jumbotron {
+    height: 80vh;
+    padding: 10vh;
+    background-color: $main_bg;
+    background-image:
+        url('../img/artist-shape-02.png'), //macchia in alto a sx
+        url('../img/artist-shape-03.png'), // puntini a sx
+        url('../img/artist-hero-image-03.png'), // profilo
+        url('../img/artist-shape-01.png'), // macchia a dx
+        url('../img/artist-shape-04.png'), // penna
+        url('../img/artist-shape-05.png'); // schizzo
+
+    background-position:
+        0 0,
+        0 40%,
+        30% 95%,
+        top right,
+        95% 10%,
+        bottom right;
+
+    background-size:
+        40%,
+        20%,
+        180px,
+        contain,
+        8%,
+        200px;
+    background-repeat: no-repeat;
+    &>* {
+        width: calc(100%/3);
+    }
+
+    .left {
+        width: 33%;
+        position: relative;
+        .small, .big {
+            position: absolute;
+        }
+        .small {
+            height: 40%;
+            bottom: 0;
+            z-index: 3;
+        }
+        .big {
+            height: 66%;
+            top: 0;
+            left: 10vh;
+        }
+    }
+    .right {
+        width: 33%;
+        position: relative;
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    img {
+width: auto;
+        display: block;
+        max-height: 100%;
+    }
+}
+
+.coaching {
+    width: 80%;
+    margin: auto;
+    li {
+        width: 25%;
+        &:nth-child(2n) {
+            padding-top: 30px;
+        }
+        img {
+            height: 5em;
+            width: auto;
+        }
+    }
+}
+.goal {
+    
+    width: 80%;
+    margin: auto;
+    .quote {
+        width: 50%;
+        flex-shrink: 0;
+        padding-right: 5em;
+    }
+}
+.video {
+    .vid-container {
+        position: relative;
+        width: 65%;
+        margin: auto;
+        .play {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+.wrapper {
+    position: relative;
+    background: url('../img/artist-shape-01.png');
+    background-position: -50% center;
+    background-repeat: no-repeat;
+}
+.wrapper::after {
+    @include aside-banner;
+    transform-origin: top right;
+    content: "Courses";
+right: 0;    top: 30%;
+}
+.courses-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    .course {
+        // background-color: white;
+        padding: 15px;
+        width: 25%;
+        overflow: hidden;
+        &:hover {
+            .info-box {
+                top: -2em;
+                // test
+                cursor: pointer;
+                background-color: $text_color_3;
+                box-shadow: 0 0 0 2px $secondary_color;
+            }
+        }
+
+        .info-box {
+            margin: 5px;
+            margin-right: 10%;
+            position: relative;
+            padding: 1em;
+            transition: position 2s;
+            .price {
+                color: $secondary_color;
+                font-family: serif;
+                font-weight: 600;
+                &::before {
+                    content: $cash;
+                }
+            }
+        }
+
+    }
+  
+
+}
+
+.events {
+    position: relative;
+    &::after {
+        @include aside-banner;
+        left: 0;
+        bottom: 100%;
+        transform-origin: bottom left;
+        content: "Events";
+    }
+    ul {
+        width: 65%;
+        margin: auto;
+        li {
+            width: 50%;
+            padding-right: 2em;
+            padding-bottom: 2em;
+        }
+        .date {
+            font-family: 'Roboto';
+        }
+    }
+}
+.blog {
+    // height: 40vh;
+    width: 70%;
+    margin: auto;
+    background-color: $secondary_bg;
+    background-image: url('../img/maxcoach-shape-03.png');
+    background-size: contain;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    .left, .right {
+        background-color: white;
+    }
+    .center {
+        margin: 30px;
+        img {
+            // height: 100%
+        }
+    }
+    .right {
+        margin-bottom: 10%;
+    }
+}
+
+// section.newsletter
+.newsletter {
+    padding: 70px;
+    color: $text_color_3;
+    background-color: $blue_c;
+    background-image: url('../img/artist-shape-color-paint-top-left.png'), url('../img/artist-shape-color-paint-bottom-right.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-size: auto 100%, auto 95%;
+    .label {
+        font-size: 2em;
+        width: 8em;
+        text-align: right;
+    }
+    .mail {
+        margin-left: 5em;
+        border-bottom: 1px solid $text_color_3;
+    }
+}
