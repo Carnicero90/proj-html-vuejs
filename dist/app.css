@@ -214,7 +214,9 @@ body {
 
 .wrapper::after {
   font-family: "Roboto", sans-serif;
-  font-size: 5rem;
+  font-size: 8.2em;
+  opacity: 0.3;
+  font-weight: bolder;
   color: white;
   position: absolute;
   z-index: -99;
@@ -263,7 +265,9 @@ body {
 }
 .events::after {
   font-family: "Roboto", sans-serif;
-  font-size: 5rem;
+  font-size: 8.2em;
+  opacity: 0.3;
+  font-weight: bolder;
   color: white;
   position: absolute;
   z-index: -99;
@@ -283,8 +287,26 @@ body {
   padding-right: 2em;
   padding-bottom: 2em;
 }
-.events ul .date {
+.events ul li .event-pic {
+  flex-shrink: 0;
+  padding-right: 3em;
+}
+.events ul li .event-description .when {
   font-family: "Roboto";
+  font-weight: 500;
+  color: #797979;
+}
+.events ul li .event-description .what {
+  color: black;
+  font-family: "Roboto";
+  font-size: 1.1em;
+  padding-top: 1em;
+  padding-bottom: 1.2em;
+}
+.events ul li .event-description .where {
+  font-family: "Roboto";
+  font-size: 0.8em;
+  color: #797979;
 }
 
 .blog {

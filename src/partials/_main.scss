@@ -171,10 +171,33 @@ right: 0;    top: 30%;
             width: 50%;
             padding-right: 2em;
             padding-bottom: 2em;
+            .event-pic {
+                flex-shrink: 0;
+                padding-right: 3em;
+            }
+            .event-description {
+                .when {
+                    font-family: 'Roboto';
+                    font-weight: 500;
+                    color: $color_4;
+                }
+                .what {
+                    color: black;
+                    font-family: 'Roboto';
+                    font-size: 1.1em;
+                    padding-top: 1em;
+                    padding-bottom: 1.2em;
+
+                }
+                .where {
+                    font-family: 'Roboto';
+                    font-size: .8em;
+                    color: $color_4;
+                }
+
+            }
         }
-        .date {
-            font-family: 'Roboto';
-        }
+       
     }
 }
 .blog {

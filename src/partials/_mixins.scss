@@ -1,6 +1,8 @@
 @mixin aside_banner {
     font-family: "Roboto", sans-serif;
-    font-size: 5rem;
+    font-size: 8.2em;
+    opacity: 0.3;
+    font-weight: bolder;
     color: white;
     position: absolute;
     z-index: -99;
