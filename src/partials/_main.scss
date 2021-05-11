@@ -23,7 +23,6 @@
         url('../img/artist-hero-image-03.png'), // profilo
         url('../img/artist-shape-01.png'), // macchia a dx
         url('../img/maxcoach-shape-12.png'),
-
         url('../img/artist-shape-04.png'), // penna
         url('../img/artist-shape-05.png'); // schizzo
         // url('../img/spot.svg');
@@ -244,25 +243,76 @@ right: 0;    top: 30%;
     }
 }
 .blog {
-    // height: 40vh;
-    width: 70%;
-    margin: auto;
-    background-color: $secondary_bg;
+    padding: 5em 20%;
+    position: relative;
+    // background-color: $secondary_bg;
     background-image: url('../img/maxcoach-shape-03.png');
     background-size: contain;
     background-position: 30%;
     background-repeat: no-repeat;
     .left, .right {
         background-color: white;
+        width: 22%;
     }
-    .center {
+    .content {
+        color: $color_4;
+        padding: 2.1em 1em;
+        padding-bottom: 2.1em;
+        line-height: 200%;
+        .artist {
+            font-size: .9em;
+            font-weight: 500;
+        }
+        h5 {
+            font-size: 1.2em;
+            color: $color_1;
+        }
+        .date {
+            padding-right: 1.3em;
+        }
+    }
+    .central {
+        padding-left: 3.2em;
+        padding-right: 3.2em;
+        position: relative;
+        color: white;
         margin: 30px;
         img {
-            // height: 100%
+            filter: brightness(80%);
+        }
+        .content {
+            line-height: 300%;
+
+            color: white;
+            position: absolute;
+            width: calc(100% - 6.4em);
+            left: 4.2em;
+            bottom: 1em;
+            h5 {
+                color: white;
+                font-size: 2em;
+            }
+            div {
+                font-weight: 500;
+            }
         }
     }
     .right {
         margin-bottom: 10%;
+    }
+    .blog-link {
+        color: $color_4;
+        a {
+            color: $secondary_color;
+            font-weight: bold;
+        }
+    }
+    .spot {
+        width: 200px;
+        height: auto;
+        left: 55%;
+        bottom: 10%;
+        z-index: -1;
     }
 }
 

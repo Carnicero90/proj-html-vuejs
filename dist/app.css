@@ -112,6 +112,7 @@ input::placeholder {
 body {
   font-family: "Roboto";
   min-width: 900px;
+  color: #333333;
 }
 
 .btn {
@@ -374,9 +375,8 @@ body {
 }
 
 .blog {
-  width: 70%;
-  margin: auto;
-  background-color: #f5f7fa;
+  padding: 5em 20%;
+  position: relative;
   background-image: url("../img/maxcoach-shape-03.png");
   background-size: contain;
   background-position: 30%;
@@ -384,12 +384,66 @@ body {
 }
 .blog .left, .blog .right {
   background-color: white;
+  width: 22%;
 }
-.blog .center {
+.blog .content {
+  color: #797979;
+  padding: 2.1em 1em;
+  padding-bottom: 2.1em;
+  line-height: 200%;
+}
+.blog .content .artist {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.blog .content h5 {
+  font-size: 1.2em;
+  color: #333333;
+}
+.blog .content .date {
+  padding-right: 1.3em;
+}
+.blog .central {
+  padding-left: 3.2em;
+  padding-right: 3.2em;
+  position: relative;
+  color: white;
   margin: 30px;
+}
+.blog .central img {
+  filter: brightness(80%);
+}
+.blog .central .content {
+  line-height: 300%;
+  color: white;
+  position: absolute;
+  width: calc(100% - 6.4em);
+  left: 4.2em;
+  bottom: 1em;
+}
+.blog .central .content h5 {
+  color: white;
+  font-size: 2em;
+}
+.blog .central .content div {
+  font-weight: 500;
 }
 .blog .right {
   margin-bottom: 10%;
+}
+.blog .blog-link {
+  color: #797979;
+}
+.blog .blog-link a {
+  color: #ef6f31;
+  font-weight: bold;
+}
+.blog .spot {
+  width: 200px;
+  height: auto;
+  left: 55%;
+  bottom: 10%;
+  z-index: -1;
 }
 
 .newsletter {
