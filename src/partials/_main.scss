@@ -11,7 +11,6 @@
     height: auto;
     bottom: 43px;
     left: -60px;
-
 }
 .jumbotron {
     height: 733px;
@@ -121,6 +120,9 @@
     }
 }
 .video {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
     .vid-container {
         position: relative;
         width: 65%;
@@ -136,6 +138,32 @@
         }
     }
 }
+.testimonials {
+    position: relative;
+    .testimony {
+        background-color: white;
+        padding: 1em;
+        width: calc(100%/3);
+        opacity: 0.3;
+        margin: 15px;
+        &.active {
+            opacity: 1;
+        }
+        img {
+            width: 15%;
+        }
+    }
+    svg {
+        position: absolute;
+        background-color: $main_bg;
+        height: 300px;
+        width: auto;
+        max-width: 100%;
+        fill: white;
+        top: -250px;
+    }
+  background: $main_bg;
+}
 .wrapper {
     position: relative;
     background: url('../img/artist-shape-01.png');
@@ -146,7 +174,8 @@
     @include aside-banner;
     transform-origin: top right;
     content: "Courses";
-right: 0;    top: 30%;
+    right: 0;    
+    bottom: 10%;
 }
 .courses-container {
     position: relative;
@@ -205,6 +234,7 @@ right: 0;    top: 30%;
             padding-right: 2em;
             padding-bottom: 4em;
             &:nth-child(n+3) {
+                padding-bottom: 0;
                 text-align: right;
                 .event-description {
                     order: -1;
@@ -217,20 +247,17 @@ right: 0;    top: 30%;
                 padding: 3em;
 
                 .when {
-                    font-family: 'Roboto';
                     font-weight: 500;
                     color: $color_4;
                 }
                 .what {
                     color: $color_1;
-                    font-family: 'Roboto';
                     font-size: 1.1em;
                     padding-top: 1em;
                     padding-bottom: 1.2em;
 
                 }
                 .where {
-                    font-family: 'Roboto';
                     font-weight: 500;
 
                     font-size: .8em;
@@ -242,8 +269,19 @@ right: 0;    top: 30%;
        
     }
 }
+.blog-container {
+    position: relative;
+    background-color: $secondary_bg;
+    .spot {
+        width: 230px;
+        height: auto;
+        left: 55%;
+        bottom: 10%;
+    }
+}
 .blog {
-    padding: 5em 20%;
+    padding-left: 20%;
+    padding-right: 20%;
     position: relative;
     // background-color: $secondary_bg;
     background-image: url('../img/maxcoach-shape-03.png');
@@ -266,9 +304,13 @@ right: 0;    top: 30%;
         h5 {
             font-size: 1.2em;
             color: $color_1;
+            padding-bottom: 1em;
         }
         .date {
             padding-right: 1.3em;
+        }
+        .date, .views {
+            font-size: .9em;
         }
     }
     .central {
@@ -301,19 +343,14 @@ right: 0;    top: 30%;
         margin-bottom: 10%;
     }
     .blog-link {
+        padding-top: 5em;
         color: $color_4;
         a {
             color: $secondary_color;
             font-weight: bold;
         }
     }
-    .spot {
-        width: 200px;
-        height: auto;
-        left: 55%;
-        bottom: 10%;
-        z-index: -1;
-    }
+   
 }
 
 // section.newsletter
