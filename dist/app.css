@@ -246,9 +246,6 @@ header .circle {
 
 .coaching {
   position: relative;
-  background-image: url("../img/maxcoach-shape-14.png");
-  background-position: 10% 100%;
-  background-repeat: no-repeat;
 }
 .coaching > *:not(.spot) {
   z-index: 1;
@@ -258,9 +255,6 @@ header .circle {
   z-index: 0;
   position: absolute;
 }
-.coaching img {
-  width: auto;
-}
 .coaching .spot {
   width: 330px;
   height: auto;
@@ -268,51 +262,113 @@ header .circle {
   right: 322px;
   fill: #fef9f7;
 }
-.coaching > div {
+.coaching .rotated {
+  transform: rotate(-127deg);
+  position: absolute;
+  height: 85%;
+  width: auto;
+  left: -140px;
+}
+.coaching .inner {
+  width: 100%;
+  background-image: url("../img/maxcoach-shape-14.png"), url("../img/maxcoach-shape-13.png");
+  background-position: 0 100%, 102% 73%;
+  background-repeat: no-repeat;
+}
+.coaching .inner > div {
   width: 62%;
   margin: auto;
 }
-.coaching > div .section-header {
+.coaching .inner > div .section-header {
   padding-bottom: 2em;
 }
-.coaching > div li {
+.coaching .inner > div li {
   padding-right: 3em;
   width: 25%;
 }
-.coaching > div li:nth-child(2n) {
+.coaching .inner > div li:nth-child(2n) {
   padding-top: 50px;
 }
-.coaching > div li h4 {
+.coaching .inner > div li h4 {
   font-size: 1.3em;
   font-weight: 400;
   line-height: 230%;
 }
-.coaching > div li p {
+.coaching .inner > div li p {
   color: #696969;
   line-height: 160%;
 }
+.coaching img {
+  width: auto;
+}
 
 .goal {
-  width: 80%;
+  padding-top: 4.8em;
+  padding-bottom: 200px;
+  width: 62%;
   margin: auto;
-}
-.goal img {
-  width: auto;
 }
 .goal .quote {
   width: 50%;
   flex-shrink: 0;
   padding-right: 5em;
 }
+.goal .quote p {
+  font-size: 2.9em;
+  font-weight: bolder;
+  padding: 0.7em;
+}
+.goal .quote .super {
+  font-size: 3.2em !important;
+}
+.goal .quote img {
+  width: auto;
+}
+.goal .tltr {
+  padding-top: 4.6em;
+}
+.goal .tltr p {
+  color: #bcbcbc;
+  font-size: 17px;
+  line-height: 1.7em;
+  padding-bottom: 1.7em;
+}
 
 .video {
   position: relative;
+}
+.video > *:not(.spot) {
   z-index: 1;
-  background-color: transparent;
+  position: relative;
+}
+.video .spot {
+  z-index: 0;
+  position: absolute;
+}
+.video .spot {
+  width: 232px;
+  height: auto;
+  top: 0;
+  left: 315px;
+  fill: #b2e0f6;
+}
+.video .circle {
+  z-index: 99;
+  left: 74%;
+  top: 263px;
+  border-width: 12px;
+  height: 85px;
+  width: 85px;
+}
+.video .inner {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-image: url("../img/maxcoach-shape-05.png"), url("../img/maxcoach-shape-12.png");
+  background-repeat: no-repeat;
+  background-position: 26% 0, 79% 100%;
 }
 .video .vid-container {
-  position: relative;
-  width: 65%;
+  width: 50%;
   margin: auto;
 }
 .video .vid-container .play {
@@ -560,6 +616,7 @@ header .circle {
   height: auto;
   left: 55%;
   bottom: 10%;
+  fill: #b2e0f6;
 }
 .blog-container .circle {
   left: 127px;

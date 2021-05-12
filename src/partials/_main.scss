@@ -78,12 +78,6 @@
 // coaching
 .coaching {
     @include bg-svg-container(".spot");
-    background-image: url("../img/maxcoach-shape-14.png"); // linea
-    background-position: 10% 100%;
-    background-repeat: no-repeat;
-    img {
-        width: auto;
-    }
     .spot {
         width: 330px;
         height: auto;
@@ -91,50 +85,111 @@
         right: 322px;
         fill: #fef9f7;
     }
-    & > div {
-        width: 62%;
-        margin: auto;
-        .section-header {
-            padding-bottom: 2em;
+    .rotated {
+        transform: rotate(-127deg);
+        position: absolute;
+        height: 85%;
+        width: auto;
+        left: -140px;
+    }
+    .inner {
+        width: 100%;
+        background-image: url("../img/maxcoach-shape-14.png"),
+            // linea
+            url("../img/maxcoach-shape-13.png");
+        background-position: 0 100%, 102% 73%;
+        background-repeat: no-repeat;
+        & > div {
+            width: 62%;
+            margin: auto;
+            .section-header {
+                padding-bottom: 2em;
+            }
+            li {
+                padding-right: 3em;
+                width: 25%;
+                &:nth-child(2n) {
+                    padding-top: 50px;
+                }
+                h4 {
+                    font-size: 1.3em;
+                    font-weight: 400;
+                    line-height: 230%;
+                }
+                p {
+                    color: #696969;
+                    line-height: 160%;
+                }
+            }
         }
-        li {
-            padding-right: 3em;
-            width: 25%;
-            &:nth-child(2n) {
-                padding-top: 50px;
-            }
-            h4 {
-                font-size: 1.3em;
-                font-weight: 400;
-                line-height: 230%;
-            }
-            p {
-                color: #696969;
-                line-height: 160%;
-            }
-        }
+    }
+
+    img {
+        width: auto;
     }
 }
 // goal
 .goal {
-    width: 80%;
+    padding-top: 4.8em;
+    padding-bottom: 200px;
+    width: 62%;
     margin: auto;
-    img {
-        width: auto;
-    }
+
     .quote {
         width: 50%;
         flex-shrink: 0;
         padding-right: 5em;
+        p {
+            font-size: 2.9em;
+            font-weight: bolder;
+            padding: 0.7em;
+        }
+        .super {
+            font-size: 3.2em !important;
+        }
+        img {
+            width: auto;
+        }
+    }
+    .tltr {
+        padding-top: 4.6em;
+        p {
+            color: $color_3;
+            font-size: 17px;
+            line-height: 1.7em;
+            padding-bottom: 1.7em;
+        }
     }
 }
 .video {
-    position: relative;
-    z-index: 1;
-    background-color: transparent;
+    @include bg-svg-container(".spot");
+    .spot {
+        width: 232px;
+        height: auto;
+        top: 0;
+        left: 315px;
+        fill: #b2e0f6;
+    }
+    $circle_h: 85px;
+    .circle {
+        z-index: 99;
+        left: 74%;
+        top: 263px;
+        border-width: 12px;
+        height: $circle_h;
+        width: $circle_h;
+    }
+    .inner {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        background-image: url("../img/maxcoach-shape-05.png"), url("../img/maxcoach-shape-12.png");
+        background-repeat: no-repeat;
+        background-position: 26% 0, 79% 100%;
+    }
+
+    // background-color: transparent;
     .vid-container {
-        position: relative;
-        width: 65%;
+        width: 50%;
         margin: auto;
         .play {
             position: absolute;
@@ -356,6 +411,7 @@
         height: auto;
         left: 55%;
         bottom: 10%;
+        fill: #b2e0f6;
     }
     background-color: $secondary_bg;
     $circle_h: 89px;
