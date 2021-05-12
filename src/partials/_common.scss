@@ -31,7 +31,7 @@ section {
     padding-bottom: 5em;
 }
 .circle {
-    border: 15px solid brown;
+    border: 11px solid #ecc5ab;
     border-radius: 50%;
 }
 .btn {
@@ -51,6 +51,14 @@ section {
     font-size: 150% !important; //poi tolgo
     display: block;
     font-family: 'Rossela', cursive;
+}
+.arrowed-link {
+    &::after {
+        font-weight: 900;
+        font-family: 'Font Awesome 5 Free';
+        content: "\f061";
+        padding-left: 1em;
+    }
 }
 .section-header {
     padding-bottom: 1.1em;

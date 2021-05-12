@@ -139,18 +139,66 @@
     }
 }
 .testimonials {
+    .inner {
+        width: 90%;
+        margin: auto;
+    }
     position: relative;
     .testimony {
+        border-radius: 5px;
+        line-height: 190%;
         background-color: white;
-        padding: 1em;
+        padding-top: 37px;
+        padding-bottom: 69px;
+        padding-left: 45px;
+        padding-right: 45px;
         width: calc(100%/3);
         opacity: 0.3;
         margin: 15px;
         &.active {
             opacity: 1;
         }
+        .title {
+            font-size: 1.3em;
+            font-weight: 550;
+            padding-bottom: .7em;
+            line-height: 150%;
+        }
+        .quote {
+            color: #696969;
+            font-weight: 500;
+            padding-bottom: 2.1em;
+        }
         img {
             width: 15%;
+            margin-right: 1.4em;
+        }
+        .name {
+            color: $color_1;
+            font-size: .9em;
+            font-weight: bold;
+        }
+        .job {
+            color: #696969;
+            font-size: .95em;
+        }
+        .job::before {
+            content: '/ '
+        }
+    }
+    .dots {
+        padding-top: 35px;
+    }
+    .dot {
+        $dot_size: .5em;
+        border-radius: 50%;
+        height: $dot_size;
+        width: $dot_size;
+        background-color: #d8d8d8;
+        margin: .7em;
+        &.active {
+            background-color: black;
+            transform: scale(1.4);
         }
     }
     svg {
@@ -179,8 +227,11 @@
 }
 .courses-container {
     position: relative;
-    width: 80%;
+    width: 76%;
     margin: auto;
+    .courses {
+        padding-bottom: 1.3em;
+    }
     .course {
         // background-color: white;
         padding: 15px;
@@ -200,15 +251,39 @@
             margin: 5px;
             margin-right: 10%;
             position: relative;
-            padding: 1em;
+            padding: 1.4em;
             transition: position 2s;
             .price {
                 color: $secondary_color;
-                font-family: serif;
-                font-weight: 600;
+                // font-family: serif;
+                font-weight: 900;
+                font-size: 1.1em;
+                padding-bottom: .9em;
                 &::before {
                     content: $cash;
                 }
+            }
+            .title {
+                font-size: 1.2em;
+                line-height: 150%;
+                font-weight: 500;
+                padding-bottom: 1.1em;
+            }
+            .course-info {
+                font-size: .9em;
+                color: #7b7b7b;
+            }
+            .lessons::before, .students::before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 400;
+                padding-right: .6em;
+            }
+            .lessons::before {
+                content: '\f15c';
+            }
+            .students::before {
+                content: '\f007';
+                padding-left: 1em;
             }
         }
 
@@ -272,6 +347,14 @@
 .blog-container {
     position: relative;
     background-color: $secondary_bg;
+    $circle_h: 89px;
+    .circle {
+        position: absolute;
+        left: 127px;
+        top: 282px;
+        height: $circle_h;
+        width: $circle_h;
+    }
     .spot {
         width: 230px;
         height: auto;
@@ -284,9 +367,12 @@
     padding-right: 20%;
     position: relative;
     // background-color: $secondary_bg;
-    background-image: url('../img/maxcoach-shape-03.png');
-    background-size: contain;
-    background-position: 30%;
+    background-image: url('../img/maxcoach-shape-03.png'),
+    url('../img/maxcoach-shape-05-150x150.png');
+    background-size: contain,
+    auto;
+    background-position: 30%,
+    39% 24%;
     background-repeat: no-repeat;
     .left, .right {
         background-color: white;
@@ -348,6 +434,8 @@
         a {
             color: $secondary_color;
             font-weight: bold;
+            padding-bottom: .1em;
+            border-bottom: 1px solid lightgray;
         }
     }
    
