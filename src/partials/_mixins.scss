@@ -1,5 +1,5 @@
 @mixin aside_banner {
-    font-family: 'Encode Sans Expanded', sans-serif;
+    font-family: "Encode Sans Expanded", sans-serif;
     // non precisissimo il font, poi vediamo
     font-size: 9.2em;
     opacity: 0.3;
@@ -7,14 +7,22 @@
     color: white;
     position: absolute;
     z-index: -99;
-    transform:  rotate(90deg);
-    text-shadow:
-    -2px -2px 0 $main_color,  
-     2px -2px 0 $main_color,
-     -2px 2px 0 $main_color,
-      2px 2px 0 $main_color;
+    transform: rotate(90deg);
+    text-shadow: -2px -2px 0 $main_color, 2px -2px 0 $main_color, -2px 2px 0 $main_color, 2px 2px 0 $main_color;
 }
 
 @mixin description {
     // pass
+}
+
+@mixin bg-svg-container($svg-selector) {
+    position: relative;
+    & > *:not(#{$svg-selector}) {
+        z-index: 1;
+        position: relative;
+    }
+    #{$svg-selector} {
+        z-index: 0;
+        position: absolute;
+    }
 }

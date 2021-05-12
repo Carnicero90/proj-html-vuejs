@@ -126,7 +126,7 @@ section {
 }
 
 .btn {
-  padding: 0.8em 2.2em;
+  padding: 1.2em 3em;
   border-radius: 0.4em;
   display: inline-block;
   font-weight: bolder;
@@ -174,93 +174,130 @@ header .circle {
   width: 89px;
 }
 
-.cont {
+.jumbo-container {
   position: relative;
   background-color: #fbf9f6;
 }
-
-.spot {
+.jumbo-container > *:not(.spot) {
+  z-index: 1;
+  position: relative;
+}
+.jumbo-container .spot {
+  z-index: 0;
   position: absolute;
+}
+.jumbo-container .spot {
   fill: #b2e0f6;
   width: 481px;
   height: auto;
   bottom: 43px;
   left: -60px;
 }
-
-.jumbotron {
+.jumbo-container .jumbotron {
   height: 733px;
-  position: relative;
   padding: 60px 147px;
   background-image: url("../img/artist-shape-02.png"), url("../img/artist-shape-03.png"), url("../img/artist-hero-image-03.png"), url("../img/artist-shape-01.png"), url("../img/maxcoach-shape-12.png"), url("../img/artist-shape-04.png"), url("../img/artist-shape-05.png");
   background-position: 0 0, 20px 145px, 30% 91%, 88% top, 82% 92%, 91.3% 20%, 93% 95%;
   background-size: 40%, auto, auto, auto 86%, auto, 130px, 320px;
   background-repeat: no-repeat;
 }
-.jumbotron img {
+.jumbo-container .jumbotron img {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
-  width: auto;
-  z-index: 1;
   display: block;
   max-height: 100%;
+  width: auto;
 }
-.jumbotron .left {
+.jumbo-container .jumbotron .left {
   width: 25%;
   position: relative;
 }
-.jumbotron .left .small, .jumbotron .left .big {
+.jumbo-container .jumbotron .left .small,
+.jumbo-container .jumbotron .left .big {
   position: absolute;
 }
-.jumbotron .left .small {
+.jumbo-container .jumbotron .left .small {
   bottom: 0;
   z-index: 3;
 }
-.jumbotron .left .big {
+.jumbo-container .jumbotron .left .big {
   top: 34px;
   left: 187px;
 }
-.jumbotron .center {
+.jumbo-container .jumbotron .center {
   flex-grow: 1;
   padding: 3em;
   z-index: 100;
   background-color: inherit;
 }
-.jumbotron .center h1 {
+.jumbo-container .jumbotron .center h1 {
   max-width: 80%;
   font-size: 2.4em;
   line-height: 130%;
 }
-.jumbotron .right {
+.jumbo-container .jumbotron .right {
   width: 25%;
   position: relative;
 }
-.jumbotron .right img {
+.jumbo-container .jumbotron .right img {
   position: absolute;
   right: 89px;
   bottom: 0;
 }
 
 .coaching {
-  width: 80%;
+  position: relative;
   background-image: url("../img/maxcoach-shape-14.png");
-  background-position: 10% 0;
+  background-position: 10% 100%;
   background-repeat: no-repeat;
+}
+.coaching > *:not(.spot) {
+  z-index: 1;
+  position: relative;
+}
+.coaching .spot {
+  z-index: 0;
+  position: absolute;
+}
+.coaching img {
+  width: auto;
+}
+.coaching .spot {
+  width: 330px;
+  height: auto;
+  top: 316px;
+  right: 322px;
+  fill: #fef9f7;
+}
+.coaching > div {
+  width: 62%;
   margin: auto;
 }
-.coaching li {
+.coaching > div .section-header {
+  padding-bottom: 2em;
+}
+.coaching > div li {
+  padding-right: 3em;
   width: 25%;
 }
-.coaching li:nth-child(2n) {
-  padding-top: 30px;
+.coaching > div li:nth-child(2n) {
+  padding-top: 50px;
 }
-.coaching li img {
-  height: 5em;
-  width: auto;
+.coaching > div li h4 {
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 230%;
+}
+.coaching > div li p {
+  color: #696969;
+  line-height: 160%;
 }
 
 .goal {
   width: 80%;
   margin: auto;
+}
+.goal img {
+  width: auto;
 }
 .goal .quote {
   width: 50%;
@@ -289,14 +326,30 @@ header .circle {
 }
 
 .testimonials {
-  position: relative;
   background: #fbf9f6;
+  position: relative;
+}
+.testimonials > *:not(.wave) {
+  z-index: 1;
+  position: relative;
+}
+.testimonials .wave {
+  z-index: 0;
+  position: absolute;
+}
+.testimonials .wave {
+  background-color: #fbf9f6;
+  height: 396px;
+  max-width: 106%;
+  fill: white;
+  top: -331px;
+  left: -135px;
 }
 .testimonials .inner {
   width: 90%;
   margin: auto;
 }
-.testimonials .testimony {
+.testimonials .inner .testimony {
   border-radius: 5px;
   line-height: 190%;
   background-color: white;
@@ -304,62 +357,53 @@ header .circle {
   padding-bottom: 69px;
   padding-left: 45px;
   padding-right: 45px;
-  width: calc(100%/3);
+  width: calc(100% / 3);
   opacity: 0.3;
   margin: 15px;
 }
-.testimonials .testimony.active {
+.testimonials .inner .testimony.active {
   opacity: 1;
 }
-.testimonials .testimony .title {
+.testimonials .inner .testimony .title {
   font-size: 1.3em;
   font-weight: 550;
   padding-bottom: 0.7em;
   line-height: 150%;
 }
-.testimonials .testimony .quote {
+.testimonials .inner .testimony .quote {
   color: #696969;
   font-weight: 500;
   padding-bottom: 2.1em;
 }
-.testimonials .testimony img {
+.testimonials .inner .testimony img {
   width: 15%;
   margin-right: 1.4em;
 }
-.testimonials .testimony .name {
+.testimonials .inner .testimony .name {
   color: #333333;
   font-size: 0.9em;
   font-weight: bold;
 }
-.testimonials .testimony .job {
+.testimonials .inner .testimony .job {
   color: #696969;
   font-size: 0.95em;
 }
-.testimonials .testimony .job::before {
+.testimonials .inner .testimony .job::before {
   content: "/ ";
 }
-.testimonials .dots {
+.testimonials .inner .dots {
   padding-top: 35px;
 }
-.testimonials .dot {
+.testimonials .inner .dots .dot {
   border-radius: 50%;
   height: 0.5em;
   width: 0.5em;
   background-color: #d8d8d8;
   margin: 0.7em;
 }
-.testimonials .dot.active {
+.testimonials .inner .dots .dot.active {
   background-color: black;
   transform: scale(1.4);
-}
-.testimonials svg {
-  position: absolute;
-  background-color: #fbf9f6;
-  height: 300px;
-  width: auto;
-  max-width: 100%;
-  fill: white;
-  top: -250px;
 }
 
 .wrapper {
@@ -368,7 +412,6 @@ header .circle {
   background-position: -50% center;
   background-repeat: no-repeat;
 }
-
 .wrapper::after {
   font-family: "Encode Sans Expanded", sans-serif;
   font-size: 9.2em;
@@ -430,7 +473,8 @@ header .circle {
   font-size: 0.9em;
   color: #7b7b7b;
 }
-.courses-container .course .info-box .lessons::before, .courses-container .course .info-box .students::before {
+.courses-container .course .info-box .lessons::before,
+.courses-container .course .info-box .students::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   padding-right: 0.6em;
@@ -503,12 +547,13 @@ header .circle {
   position: relative;
   background-color: #f5f7fa;
 }
-.blog-container .circle {
+.blog-container > *:not(.spot) {
+  z-index: 1;
+  position: relative;
+}
+.blog-container .spot {
+  z-index: 0;
   position: absolute;
-  left: 127px;
-  top: 282px;
-  height: 89px;
-  width: 89px;
 }
 .blog-container .spot {
   width: 230px;
@@ -516,17 +561,23 @@ header .circle {
   left: 55%;
   bottom: 10%;
 }
+.blog-container .circle {
+  left: 127px;
+  top: 282px;
+  height: 89px;
+  width: 89px;
+}
 
 .blog {
   padding-left: 20%;
   padding-right: 20%;
-  position: relative;
   background-image: url("../img/maxcoach-shape-03.png"), url("../img/maxcoach-shape-05-150x150.png");
   background-size: contain, auto;
   background-position: 30%, 39% 24%;
   background-repeat: no-repeat;
 }
-.blog .left, .blog .right {
+.blog .left,
+.blog .right {
   background-color: white;
   width: 22%;
 }
@@ -548,7 +599,8 @@ header .circle {
 .blog .content .date {
   padding-right: 1.3em;
 }
-.blog .content .date, .blog .content .views {
+.blog .content .date,
+.blog .content .views {
   font-size: 0.9em;
 }
 .blog .central {
