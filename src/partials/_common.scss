@@ -43,6 +43,18 @@ section {
     &.solid {
         color: white;
         background-color: $secondary_color;
+        &:hover {
+            background-color: #81c3ed;
+            color: white;
+        }
+    }
+    &.light {
+        background-color: #fef0ea;
+        color: $secondary_color;
+        &:hover {
+            color: white;
+            background-color: $secondary_color;
+        }
     }
 }
 .super {
