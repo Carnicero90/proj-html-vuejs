@@ -483,7 +483,11 @@
             <ul class="info flexer between">
                 <li>
                     <h4>Address</h4>
-                    <ul></ul>
+                    <ul>
+                        <li v-for="info in footer.addressInfo">
+                            {{ info }}
+                        </li>
+                    </ul>
                     <ul class="socials flexer center-cross">
                         <li v-for="item in footer.socialsList">
                             <a :href="socials[item].link"><i
@@ -513,7 +517,7 @@
 
             </ul>
 
-            <p class="text-center"><i class="far fa-copyright"> </i>2020 Maxcoach, All Rights Reserved</p>
+            <p class="copyright text-center"><i class="far fa-copyright"> </i>2020 Maxcoach, All Rights Reserved</p>
 
         </footer>
         <!-- END FOOTER -->

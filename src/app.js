@@ -31,6 +31,11 @@ var app = new Vue({
 
             },
             footer: {
+                addressInfo: {
+                    'location': '382 NE 191st St # 87394 Miami, FL 33179-3899',
+                    'phone': '+1(305) 547-9909 (9am - 5pm EST, Monday-Friday)',
+                    'mail': 'support@maxcoach.com'
+                },
                 explore: ['Start here', 'Success story', 'Blog', 'Courses', 'Contact us'],
                 information: ['Membership', 'Purchase guide', 'Privacy policy', 'Terms od services'],
                 instaPreviews: ['insta_0.jpg', 'insta_1.jpg','insta_2.jpg'],
@@ -43,16 +48,3 @@ var app = new Vue({
 
 
     })
-
-socials = [
-    { 'twitter': '#' },
-    { 'facebook': '#' },
-    { 'instagram': '#' },
-    { 'linkedin': '#' }
-];
-headerUl = [];
-
-footerUls = {
-    'Explore': [],
-    'Information': []
-};

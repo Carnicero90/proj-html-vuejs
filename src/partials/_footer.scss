@@ -1,8 +1,21 @@
 footer {
+    margin: auto;
+    width: 75%;
     padding-top: 6em;
-    line-height: 2em;
+    padding-bottom: 3em;
+    line-height: 2.4em;
+    color: #696969;
+    font-size: .9em;
     h4 {
-        font-size: 1.1em
+        font-size: 1.3em;
+        color: $color_1;
+        padding-bottom: .4em;
+
+    }
+    .socials {
+        padding-top: 1.4em;
+        color: #b3b3b3;
+        font-size: 1.7em;
     }
     .insta {
         h4 {
@@ -18,5 +31,9 @@ footer {
             padding-right: 1.4em;
             max-width: 160px;
         }
+    }
+    .copyright {
+        padding-top: 6em;
+        color: #aaacbf;
     }
 }
