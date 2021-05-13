@@ -4,4 +4,30 @@ header {
         height: $circle_h;
         width: $circle_h;
     }
+    .banner {
+        background-color: #f5f5f5;
+    }
+
+    nav {
+        padding-top: 1.6em;
+        padding-bottom: 1.6em;
+        color: #696969;
+        .logo img {
+            height: 1.6em;
+        }
+        .dropdowns {
+            li {
+                padding-right: 2.2em;
+                i {
+                    font-size: 0.7em;
+                }
+            }
+        }
+        .socials {
+            font-size: 1.3em;
+            li {
+                padding-right: 1.5em;
+            }
+        }
+    }
 }

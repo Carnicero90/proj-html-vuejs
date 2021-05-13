@@ -28,25 +28,25 @@
     <div id="root">
         <!-- HEADER -->
         <header>
-            <span class="test">ciao</span>
-
-            <div class="circle"></div>
+            <div class="banner flexer center center-cross">
+                <span>Starts TOMORROW! Our biggest event of the year...</span>
+                <span><i class="far fa-clock"></i> 00 : 00 : 00 : 00</span>
+                <a href="#" class="btn solid">Get ticket</a>
+            </div>
             <nav class="flexer center-cross around">
                 <div class="logo">
                     <img src="img/dark-logo.png" alt="logo">
                 </div>
-                <ul class="flexer">
-                    <li>testo</li>
-                    <li>testo</li>
-                    <li>testo</li>
-                    <li>testo</li>
-                    <li>testo</li>
+                <ul class="dropdowns flexer center-cross">
+                    <li v-for="item in header.ul">
+                        {{ item }} <i class="fas fa-chevron-down"></i>
+                    </li>
                 </ul>
-                <ul class="flexer">
-                    <li><i class="fab fa-facebook"></i></li>
-                    <li><i class="fab fa-facebook"></i></li>
-                    <li><i class="fab fa-facebook"></i></li>
-                    <li><i class="fab fa-facebook"></i></li>
+                <ul class="socials flexer center-cross">
+                    <li v-for="item in header.socialsList">
+                        <a :href="socials[item].link"><i :class="header.socialsStyle + ' ' + socials[item].awesome"></i></a>
+                    </li>
+                    
                 </ul>
 
             </nav>
@@ -482,11 +482,6 @@
         <!-- END FOOTER -->
 
         <!-- FIXED -->
-        <div class="flexer center center-cross">
-            <span>Starts TOMORROW! Our biggest event of the year...</span>
-            <span><i class="far fa-clock"></i> 00 : 00 : 00 : 00</span>
-            <a href="#" class="btn solid">Get ticket</a>
-        </div>
         <div class="flexer col">
             <ul>
                 <li><a href=""><i class="fas fa-ruler"></i></a></li>
@@ -498,7 +493,8 @@
         <!-- END FIXED -->
     </div>
     <!-- END VUE CONTAINER -->
-
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="dist/app.js"></script>
 </body>
 
 </html>
