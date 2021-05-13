@@ -31,8 +31,11 @@ var app = new Vue({
 
             },
             footer: {
+                explore: ['Start here', 'Success story', 'Blog', 'Courses', 'Contact us'],
+                information: ['Membership', 'Purchase guide', 'Privacy policy', 'Terms od services'],
+                instaPreviews: ['insta_0.jpg', 'insta_1.jpg','insta_2.jpg'],
                 socialsList: ['facebook', 'twitter', 'instagram', 'linkedin'],
-                socialsStyle: 'fas'
+                socialsStyle: 'fab' //uguale all'header, l'ho notato dopo
             }
         }
 

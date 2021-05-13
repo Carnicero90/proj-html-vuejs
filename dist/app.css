@@ -110,6 +110,13 @@ input::placeholder {
   opacity: 1;
 }
 
+.socials {
+  font-size: 1.3em;
+}
+.socials li {
+  padding-right: 1.5em;
+}
+
 body {
   font-family: "Roboto";
   color: #333333;
@@ -213,12 +220,6 @@ header nav .dropdowns li {
 }
 header nav .dropdowns li i {
   font-size: 0.7em;
-}
-header nav .socials {
-  font-size: 1.3em;
-}
-header nav .socials li {
-  padding-right: 1.5em;
 }
 
 .jumbo-container {
@@ -767,6 +768,26 @@ header nav .socials li {
   font-size: 1.4em;
   padding-bottom: 0.6em;
   border-bottom: 2px solid #5b71a4;
+}
+
+footer {
+  padding-top: 6em;
+  line-height: 2em;
+}
+footer h4 {
+  font-size: 1.1em;
+}
+footer .insta h4 {
+  padding-bottom: 1.4em;
+}
+footer .insta .ref {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #ef6f31;
+}
+footer .insta img {
+  padding-right: 1.4em;
+  max-width: 160px;
 }
 
 .fixed {

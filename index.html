@@ -44,9 +44,10 @@
                 </ul>
                 <ul class="socials flexer center-cross">
                     <li v-for="item in header.socialsList">
-                        <a :href="socials[item].link"><i :class="header.socialsStyle + ' ' + socials[item].awesome"></i></a>
+                        <a :href="socials[item].link"><i
+                                :class="header.socialsStyle + ' ' + socials[item].awesome"></i></a>
                     </li>
-                    
+
                 </ul>
 
             </nav>
@@ -89,7 +90,7 @@
 
             <!-- section.coaching -->
             <section class="coaching">
-                    <img src="img/artist-shape-01.png" alt="" class="rotated">
+                <img src="img/artist-shape-01.png" alt="" class="rotated">
                 <svg class="spot" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 202">
                     <path
                         d="M139.374493,198.087515 C155.702187,206.99353 190.724846,197.001323 197.677982,159.049528 C204.827153,120.027728 184.496324,118.997566 188.045232,104.801934 C202.287755,83.6528313 204.827153,56.662651 190.073179,40.4146034 C153.570125,2.39058926 144.444362,48.0194062 114.025151,20.1351292 C101.727304,7.83728238 83.0989526,-6.73517414 56.2286492,3.40456297 C18.2385839,17.7404371 27.3303985,47.659333 27.3303985,69.3128542 C27.3303985,76.9370868 3.11408002,91.2696589 0.460095291,110.885776 C-2.88628833,135.619549 12.6277797,168.175291 27.3303985,179.329002 C50.6517938,205.692318 86.6478605,199.608476 102.87144,190.482713 C116.802125,182.646702 128.220783,192.003673 139.374493,198.087515 Z">
@@ -105,31 +106,35 @@
                             <li>
                                 <img src="img/artist-box-image-01.png" alt="">
                                 <h4>Online Courses</h4>
-                                <p>Online art coaching now offers you a very powerful way to redesign your artist mind.</p>
+                                <p>Online art coaching now offers you a very powerful way to redesign your artist mind.
+                                </p>
                             </li>
                             <li>
                                 <img src="img/artist-box-image-02.png" alt="">
                                 <h4>One to One</h4>
-                                <p>Getting the necessary clarity about the current state to help you improve your ability.
+                                <p>Getting the necessary clarity about the current state to help you improve your
+                                    ability.
                                 </p>
                             </li>
                             <li>
                                 <img src="img/artist-box-image-03.png" alt="">
                                 <h4>Anywhere</h4>
-                                <p>Access to valuable and portable program which allow you to setup and live anywhere you
+                                <p>Access to valuable and portable program which allow you to setup and live anywhere
+                                    you
                                     want.
                                 </p>
                             </li>
                             <li>
                                 <img src="img/artist-box-image-04.png" alt="">
                                 <h4>On Time</h4>
-                                <p>Punctuality is our top priority because it's an essential criteria to assess a program
+                                <p>Punctuality is our top priority because it's an essential criteria to assess a
+                                    program
                                     quality.</p>
                             </li>
                         </ul>
 
                     </div>
-                    
+
                 </div>
 
             </section>
@@ -475,6 +480,38 @@
         <!-- END MAIN -->
         <!-- FOOTER -->
         <footer>
+            <ul class="info flexer between">
+                <li>
+                    <h4>Address</h4>
+                    <ul></ul>
+                    <ul class="socials flexer center-cross">
+                        <li v-for="item in footer.socialsList">
+                            <a :href="socials[item].link"><i
+                                    :class="footer.socialsStyle + ' ' + socials[item].awesome"></i></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li v-for="item in footer.explore">{{item}}</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Information</h4>
+                    <ul>
+                        <li v-for="item in footer.information">{{item}}</li>
+                    </ul>
+                </li>
+                <li class="insta">
+                    <h4>Instagram <span class="ref">@maxcoach</span></h4>
+                    <ul class="flexer"><img v-for="path in footer.instaPreviews" :src="'img/' + path" alt=""></ul>
+                </li>
+
+
+
+
+            </ul>
 
             <p class="text-center"><i class="far fa-copyright"> </i>2020 Maxcoach, All Rights Reserved</p>
 
